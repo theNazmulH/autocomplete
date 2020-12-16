@@ -1,27 +1,27 @@
 [ 
   {
     "name": "ababcd", 
-    "lang": "US",
+    "lang": "us",
     "url":"www.google.com"
   }, 
   {
     "name": "abcdef", 
-    "lang": "GB",
+    "lang": "gb",
     "url":"www.google.com"
   }, 
   {
     "name": "efgabcd", 
-    "lang": "CN",
+    "lang": "cn",
     "url":"www.google.com"
   },  
   {
     "name": "abcde", 
-    "lang": "CN",
+    "lang": "cn",
     "url":"www.google.com"
   },  
   {
     "name": "abcdefgh", 
-    "lang": "GB",
+    "lang": "gb",
     "url":"www.google.com"
   }  
 ]
