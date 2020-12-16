@@ -3,5 +3,5 @@
   {"name": "abcdef", "code": "GB"}, 
   {"name": "efgabcd", "code": "CN"},  
   {"name": "abcde", "code": "CN"},  
-  {"name": "abcdefgh", "code": "GB"},  
+  {"name": "abcdefgh", "code": "GB"}  
 ]
