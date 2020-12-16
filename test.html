@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Easy Auto Complete Issue - Require Focus</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.css'>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="form-control">
+        <label>Autocomplete</label>
+        <input id="countries" />
+    </div>
+    <div class="form-control">
+        <label>Additional Field</label>
+        <input id="states" />
+    </div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.js'></script>
+    <script>
+    var options = {
+        url: "https://raw.githubusercontent.com/KyleMit/libraries/gh-pages/libraries/people.json",
+        getValue: "name",
+        list: {
+            match: {
+                enabled: true
+            }
+        }
+    };
+
+
+
+
+    $("#countries").easyAutocomplete(options);
+
+    $(".easy-autocomplete-container").on("show.eac", function(e) {
+        var inputId = this.id.replace('eac-container-', '');
+        var isFocused = $("#" + inputId).is(":focus");
+        if (!isFocused) {
+            e.stopImmediatePropagation();
+        }
+    });
+
+    $(".easy-autocomplete-container").each(function() {
+        $._data(this, 'events')["show"].reverse();
+    });
+    </script>
+</body>
+
+</html>
