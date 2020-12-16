@@ -28,7 +28,13 @@
             match: {
                 enabled: true
             }
-        }
+        },
+        template: {
+             type: "custom",
+            method: function(value, item) {
+                return "<span class='flag flag-" + (item.code).toLowerCase() + "' ></span>" + value;
+            }
+        },
     };
 
 
@@ -48,6 +54,8 @@
         $._data(this, 'events')["show"].reverse();
     });
     </script>
+        <link rel="stylesheet" href="search/flags.css">
+    <link rel="stylesheet" href="search/easy-autocomplete.themes.min.css">
 </body>
 
 </html>
